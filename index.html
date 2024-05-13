@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consent</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+  <div class="modal modal-1">
+    <div class="modal-container">
+      <div class="modal-content first-modal" id="first-modal">
+        <p class="modal_text">We use cookies and tracking pixels to increase the user-friendliness of our services.
+          We collect data for the following purposes: <span class="black">advertising, limited data collection,
+            personalized service optimization & technical operation of the website.</span> For the same purpose, we also
+          work with selected partners. You can change or withdraw your consent at any time in our <a href="#">privacy
+            policy</a> and <a href="#">legal notice</a>
+        </p>
+        <div class="buttons-container">
+          <button class="btn" id="preferences">Preferences</button>
+          <button class="btn" id="accept">Accept</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal modal-2 hidden" id="second-modal">
+    <div class="modal-container">
+      <div class="modal-content second-modal">
+        <div>
+          <button class="close-btn" id="close">&#10005</button>
+        </div>
+
+        <p>Privacy settings</p>
+        <p class="modal_text">We use cookies to provide you with an optimal website experience. These include cookies
+          that are necessary
+          for the operation and control of the website, as well as those that are only used for anonymous statistical
+          purposes or to display personalized content. Decide for yourself which categories you want to allow. To learn
+          more, please read our <a href="">privacy policy</a> .</p>
+        <div>
+          <div>
+
+            <div>
+              <details>
+                <summary>
+                  <input type="checkbox" id="cbox0" value="0" required />
+                  <label for="cbox0">Limited data collection (1) *</label>
+                </summary>
+                <div>
+                  <input type="checkbox" id="cbox0" value="0" required />
+                  <label for="cbox0">Google Analytics *</label>
+                  <p>Limited Google Analytics</p>
+                  <p>limited data collection</p>
+                </div>
+              </details>
+            </div>
+
+            <div>
+              <details>
+                <summary>
+                  <input type="checkbox" id="cbox0" value="0" />
+                  <label for="cbox0">Advertising (7)</label>
+                </summary>
+                <div>
+                  <div>
+                    <input type="checkbox" id="cbox1" value="1" />
+                    <label for="cbox1">Facebook Conversion API</label>
+                    <p>Marketing activities via Facebook</p>
+                    <details>
+                      <summary>
+                        Show details
+                      </summary>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Name:</td>
+                            <td>fr</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>Host:</td>
+                            <td> https://facebook.com/</td>
+                          </tr>
+                          <tr>
+                            <td>Description:</td>
+                            <td>This cookie is used to deliver advertisements and to measure and improve their
+                              relevance.</td>
+                          </tr>
+                          <tr>
+                            <td>Kind:</td>
+                            <td>3rd Party</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Name:</td>
+                            <td>_fbc</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>Host:</td>
+                            <td> kredit.de</td>
+                          </tr>
+                          <tr>
+                            <td>Description:</td>
+                            <td>This cookie is used to identify the click ID and to share data with Facebook so that
+                              personalised content can be delivered to the user</td>
+                          </tr>
+                          <tr>
+                            <td>Kind:</td>
+                            <td>1st Party</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </details>
+                  </div>
+
+                  <div>
+                    <input type="checkbox" id="cbox2" value="2" />
+                    <label for="cbox2">Bing Ads</label>
+                    <p>Marketing activities via Bing</p>
+                    <details>
+                      <summary>
+                        Show details
+                      </summary>
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Name:</td>
+                            <td>msclkid</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>Host:</td>
+                            <td>kredit.de</td>
+                          </tr>
+                          <tr>
+                            <td>Description:</td>
+                            <td>Information about the ad click generated at the time of the ad click and appended to the
+                              offer page URL when auto-tagging of the click ID by Microsoft is enabled.</td>
+                          </tr>
+                          <tr>
+                            <td>Kind:</td>
+                            <td>1st Party</td>
+                          </tr>
+                        </tbody>
+                      </table>
+
+                      <table>
+                        <tbody>
+                          <tr>
+                            <td>Name:</td>
+                            <td>MUID</td>
+                          </tr>
+                          <tr class="active-row">
+                            <td>Host:</td>
+                            <td>http://bing.com/</td>
+                          </tr>
+                          <tr>
+                            <td>Description:</td>
+                            <td>Marketing activities via Bing</td>
+                          </tr>
+                          <tr>
+                            <td>Kind:</td>
+                            <td>3rd Party</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </details>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="cbox3" value="3" />
+                    <label for="cbox">Google Customer Match</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="cbox4" value="4" />
+                    <label for="cbox4">Google Ads Conversion Measurement</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="cbox5" value="5" />
+                    <label for="cbox5">Google Enhanced Conversions</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="cbox6" value="6" />
+                    <label for="cbox6">Adcell Pixel</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="cbox7" value="7" />
+                    <label for="cbox7">Google Ads Remarketing</label>
+                  </div>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+        <div class="buttons-container">
+          <button class="btn" id="save">Save</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

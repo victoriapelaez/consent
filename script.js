@@ -6,12 +6,12 @@ document.addEventListener("DOMContentLoaded", function () {
     modal1.style.opacity = "1";
   }, 1000);
 
-  document.querySelector("#accept").addEventListener("click", function (event) {
+  document.querySelector(".accept").addEventListener("click", function (event) {
     event.preventDefault();
     document.querySelector(".modal").style.display = "none";
   });
 
-  document.querySelector("#preferences").addEventListener("click", function (event) {
+  document.querySelector(".preferences").addEventListener("click", function (event) {
     var modal2 = document.querySelector(".modal-2");
     event.preventDefault();
     document.querySelector(".modal-1").style.display = "none";
@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     modal2.style.opacity = "1";
   });
 
-  document.querySelector("#save").addEventListener("click", function (event) {
+  document.querySelector(".save").addEventListener("click", function (event) {
     event.preventDefault();
     document.querySelector(".modal-2").style.display = "none";
   });
 
-  var closeButton = document.getElementById("close");
+  var closeButton = document.querySelector(".close-btn");
   closeButton.addEventListener("click", function () {
     event.preventDefault();
     document.querySelector(".modal-2").style.display = "none";

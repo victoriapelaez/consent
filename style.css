@@ -47,20 +47,6 @@ body {
   background: rgba(73, 73, 73, 0.8);
 }
 
-.modal_text {
-  line-height: 1.75;
-  font-size: 0.9em;
-  margin: 0;
-}
-
-.modal_text a {
-  color: black;
-}
-
-.modal_text a:hover {
-  color: grey;
-}
-
 /* Styles modal 1 */
 .modal.modal-1 {
   width: 100%;
@@ -85,6 +71,27 @@ body {
   align-items: center;
 }
 
+.modal_1_text {
+  line-height: 1.75;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.modal_1_text a {
+  color: black;
+}
+
+.modal_1_text a:hover {
+  color: grey;
+}
+
+.buttons-container-modal-1 {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
 /* Styles modal 2 */
 .modal.modal-2 {
   width: 100%;
@@ -100,48 +107,132 @@ body {
   border-radius: 0 10px 10px 0;
 }
 
-.second-modal{
-  padding: 2rem;
+.second-modal {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: space-between;
 }
 
-.second-modal .modal_text{
+.second-modal .modal_text {
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 
+.sub-p{
+  color: rgb(177, 177, 177);
+}
 
-summary{
+summary {
   font-family: var(--bold-font);
 }
 
-details div{
-  width: 90%;
+details div {
+  width: 92%;
   margin: 1rem auto;
 }
 
-details div p{
-  font-size: 0.7em;
-  margin-left: 1.5rem;
+details div p {
+  font-size: 0.8em;
+  margin: 0.5rem 0 0 1.5rem;
 }
 
-details div div details summary{
-font-family: var(--regular-font);
-color: grey;
-text-decoration: underline;
-font-size: 14px;
+details div div details summary {
+  font-family: var(--regular-font);
+  color: grey;
+  text-decoration: underline;
+  font-size: 12px;
 }
 
-/* buttons */
+.modal_2_text {
+  padding: 0 0 1.5rem;
+  margin: 0 1rem;
+  border-bottom: 1px #bababa63 solid;
+}
 
-.buttons-container {
-  margin-top: 1.5rem;
+.modal_2_text .title {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-family: var(--bold-font);
+}
+
+.modal_2_text > p {
+  line-height: 1.75;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.modal_2_text p a {
+  color: black;
+}
+
+.modal_2_text p a:hover {
+  color: grey;
+}
+
+.content-container {
+  padding: 1.5rem 1rem;
+}
+
+.content-container > div {
+  overflow-y: auto;
+  height: 60vh;
+}
+
+.content-container > div > div {
+  border: 1px #bababa63 solid;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  padding: 1rem 0 1rem 1rem;
+  margin-right: 1rem;
+}
+
+.content-container > div > div > details > div > div > details > summary {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+.content-container > div > div > details > summary {
+  cursor: pointer;
+}
+
+.details {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+table {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+tbody {
+  font-size: 0.75rem;
+}
+
+tbody tr {
+  background-color: #f1f1f1;
+}
+
+td {
+  border: none;
+  padding: 7px;
+}
+
+table tbody tr td:nth-child(1) {
+  width: 75px;
+}
+
+.buttons-container-modal-2 {
   display: flex;
   flex-wrap: wrap;
-  gap: 15px;
+  padding: 2rem 1rem 0;
 }
 
+/* close button */
 
-.btn{
-  cursor: pointer;
+.close-btn-container {
+  margin-top: -0.3rem;
 }
 
 .close-btn {
@@ -153,10 +244,16 @@ font-size: 14px;
   display: flex;
   justify-content: flex-end;
   width: 100%;
+  padding: 0;
 }
 
+/* buttons */
 
-#preferences {
+.btn {
+  cursor: pointer;
+}
+
+.preferences {
   background-color: white;
   color: black;
   font-size: 1rem;
@@ -168,7 +265,7 @@ font-size: 14px;
   max-width: 16em;
 }
 
-#accept {
+.accept {
   background-color: black;
   color: white;
   font-size: 1rem;
@@ -180,7 +277,7 @@ font-size: 14px;
   max-width: 16em;
 }
 
-#save {
+.save {
   background-color: black;
   color: white;
   font-size: 1rem;
@@ -190,4 +287,32 @@ font-size: 14px;
   border: 1px black solid;
   width: 13em;
   max-width: 16em;
+}
+
+/* scroll */
+
+.content-container > div::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.content-container > div::-webkit-scrollbar:vertical {
+  width: 9px;
+}
+
+.content-container > div::-webkit-scrollbar-button:increment,
+.content-container > div::-webkit-scrollbar-button {
+  display: none;
+}
+
+.content-container > div::-webkit-scrollbar-thumb {
+  background-color: rgb(88, 88, 88);
+  border-radius: 10px;
+  border: 2px solid rgb(88, 88, 88);
+}
+.content-container > div::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+
+
+@media screen and (max-width: 1300px) {
 }

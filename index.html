@@ -12,48 +12,51 @@
 <body>
   <div class="modal modal-1">
     <div class="modal-container">
-      <div class="modal-content first-modal" id="first-modal">
-        <p class="modal_text">We use cookies and tracking pixels to increase the user-friendliness of our services.
+      <div class="modal-content first-modal">
+        <p class="modal_1_text">We use cookies and tracking pixels to increase the user-friendliness of our services.
           We collect data for the following purposes: <span class="black">advertising, limited data collection,
             personalized service optimization & technical operation of the website.</span> For the same purpose, we also
           work with selected partners. You can change or withdraw your consent at any time in our <a href="#">privacy
             policy</a> and <a href="#">legal notice</a>
         </p>
-        <div class="buttons-container">
-          <button class="btn" id="preferences">Preferences</button>
-          <button class="btn" id="accept">Accept</button>
+        <div class="buttons-container-modal-1">
+          <button class="btn preferences">Preferences</button>
+          <button class="btn accept">Accept</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal modal-2 hidden" id="second-modal">
+  <div class="modal modal-2 hidden">
     <div class="modal-container">
       <div class="modal-content second-modal">
-        <div>
-          <button class="close-btn" id="close">&#10005</button>
+        <div class="close-btn-container">
+          <button class="close-btn">&#10005</button>
+        </div>
+        <div class="modal_2_text">
+          <p class="title">Privacy settings</p>
+          <p>We use cookies to provide you with an optimal website experience. These include cookies
+            that are necessary for the operation and control of the website, as well as those that are only used for
+            anonymous statistical purposes or to display personalized content. Decide for yourself which categories you
+            want to allow. To learn more, please read our <a href="">privacy policy</a> .</p>
         </div>
 
-        <p>Privacy settings</p>
-        <p class="modal_text">We use cookies to provide you with an optimal website experience. These include cookies
-          that are necessary
-          for the operation and control of the website, as well as those that are only used for anonymous statistical
-          purposes or to display personalized content. Decide for yourself which categories you want to allow. To learn
-          more, please read our <a href="">privacy policy</a> .</p>
-        <div>
+        <div class="content-container">
           <div>
 
             <div>
               <details>
                 <summary>
-                  <input type="checkbox" id="cbox0" value="0" required />
-                  <label for="cbox0">Limited data collection (1) *</label>
+                  <input type="checkbox" id="same-name-label-1" />
+                  <label for="same-name-label-1">Limited data collection (1) *</label>
                 </summary>
                 <div>
-                  <input type="checkbox" id="cbox0" value="0" required />
-                  <label for="cbox0">Google Analytics *</label>
-                  <p>Limited Google Analytics</p>
-                  <p>limited data collection</p>
+                  <div>
+                    <input type="checkbox" id="same-name-label-2" />
+                    <label for="same-name-label-2">Google Analytics *</label>
+                    <p>Limited Google Analytics</p>
+                    <p class="sub-p">limited data collection</p>
+                  </div>
                 </div>
               </details>
             </div>
@@ -61,15 +64,15 @@
             <div>
               <details>
                 <summary>
-                  <input type="checkbox" id="cbox0" value="0" />
-                  <label for="cbox0">Advertising (7)</label>
+                  <input type="checkbox" id="same-name-label-3" />
+                  <label for="same-name-label-3">Advertising (7)</label>
                 </summary>
                 <div>
                   <div>
-                    <input type="checkbox" id="cbox1" value="1" />
-                    <label for="cbox1">Facebook Conversion API</label>
+                    <input type="checkbox" id="same-name-label-4" />
+                    <label for="same-name-label-4">Facebook Conversion API</label>
                     <p>Marketing activities via Facebook</p>
-                    <details>
+                    <details class="details">
                       <summary>
                         Show details
                       </summary>
@@ -120,10 +123,10 @@
                   </div>
 
                   <div>
-                    <input type="checkbox" id="cbox2" value="2" />
-                    <label for="cbox2">Bing Ads</label>
+                    <input type="checkbox" id="same-name-label-5" />
+                    <label for="same-name-label-5">Bing Ads</label>
                     <p>Marketing activities via Bing</p>
-                    <details>
+                    <details class="details">
                       <summary>
                         Show details
                       </summary>
@@ -172,32 +175,40 @@
                     </details>
                   </div>
                   <div>
-                    <input type="checkbox" id="cbox3" value="3" />
-                    <label for="cbox">Google Customer Match</label>
+                    <input type="checkbox" id="same-name-label-6" />
+                    <label for="same-name-label-6">Google Customer Match</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="cbox4" value="4" />
-                    <label for="cbox4">Google Ads Conversion Measurement</label>
+                    <input type="checkbox" id="same-name-label-7" />
+                    <label for="same-name-label-7">Google Ads Conversion Measurement</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="cbox5" value="5" />
-                    <label for="cbox5">Google Enhanced Conversions</label>
+                    <input type="checkbox" id="same-name-label-8" />
+                    <label for="same-name-label-8">Google Enhanced Conversions</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="cbox6" value="6" />
-                    <label for="cbox6">Adcell Pixel</label>
+                    <input type="checkbox" id="same-name-label-9" />
+                    <label for="same-name-label-9">Adcell Pixel</label>
                   </div>
                   <div>
-                    <input type="checkbox" id="cbox7" value="7" />
-                    <label for="cbox7">Google Ads Remarketing</label>
+                    <input type="checkbox" id="same-name-label-10" />
+                    <label for="same-name-label-10">Google Ads Remarketing</label>
                   </div>
                 </div>
               </details>
             </div>
+
+
           </div>
         </div>
-        <div class="buttons-container">
-          <button class="btn" id="save">Save</button>
+
+
+
+
+
+
+        <div class="buttons-container-modal-2">
+          <button class="btn save">Save</button>
         </div>
       </div>
     </div>

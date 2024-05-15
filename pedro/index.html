@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    .wrapper {
+      animation: spin 10s linear infinite;
+      width: 70%;
+      overflow: hidden;
+      height: auto;
+      margin: auto;
+
+    }
+
+    .pedro {
+      scale: 1.1;
+      overflow: hidden;
+      padding: 3rem;
+      border-radius: 50%;
+      animation: bounce 200ms linear infinite alternate;
+    }
+
+    @keyframes bounce {
+      to {
+        translate: 0 30px;
+      }
+    }
+
+    @keyframes spin {
+      to {
+        rotate: -1turn;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrapper">
+    <img src="/pedro/pedro.png" class="pedro" alt="">
+  </div>
+
+  <audio src="/pedro/spotifydown.com - Pedro.mp3" autoplay>
+  </audio>
+
+</body>
+
+</html>

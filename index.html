@@ -10,110 +10,109 @@
 </head>
 
 <body>
-  <div class="modal modal-1">
-    <div class="modal-container">
-      <div class="modal-content first-modal">
-        <p class="modal_1_text">We use cookies and tracking pixels to increase the user-friendliness of our services.
-          We collect data for the following purposes: <span class="black">advertising, limited data collection,
-            personalized service optimization & technical operation of the website.</span> For the same purpose, we also
-          work with selected partners. You can change or withdraw your consent at any time in our <a href="#">privacy
-            policy</a> and <a href="#">legal notice</a>
+  <div class="banner">
+    <div class="banner-wrapper">
+      <div class="banner-content">
+        <p class="banner-title">Your tracking preferences</p>
+        <p class="banner-text">We use cookies and tracking pixels to increase the user-friendliness of our services.
+          We collect data for the following purposes: <strong>advertising, limited data collection,
+            personalized service optimization & technical operation of the website.</strong> For the same purpose, we
+          also work with selected partners. You can change or withdraw your consent at any time in our <a href="#"
+            class="banner-link">privacy policy</a> and <a href="#" class="banner-link">legal notice</a>
         </p>
-        <div class="buttons-container-modal-1">
-          <button class="btn preferences">Preferences</button>
-          <button class="btn accept">Accept</button>
+        <div class="banner-buttons-wrapper">
+          <button class="btn button-preferences">Preferences</button>
+          <button class="btn button-accept">Accept</button>
         </div>
       </div>
     </div>
   </div>
 
-  <div class="modal modal-2 hidden">
-    <div class="modal-container">
-      <div class="modal-content second-modal">
-        <div class="close-btn-container">
-          <button class="close-btn">&#10005</button>
+  <div class="purposes-banner hidden">
+    <div class="purposes-banner-wrapper">
+      <div class="purposes-banner-content">
+        <div class="close-purposes-banner-wrapper">
+          <button class="button-x-close">&#10005</button>
         </div>
-        <div class="modal_2_text">
-          <p class="title">Privacy settings</p>
-          <p>We use cookies to provide you with an optimal website experience. These include cookies
-            that are necessary for the operation and control of the website, as well as those that are only used for
-            anonymous statistical purposes or to display personalized content. Decide for yourself which categories you
-            want to allow. To learn more, please read our <a href="">privacy policy</a> .</p>
+        <div class="purposes-banner-text-wrapper">
+          <p class="purposes-banner-title">Privacy settings</p>
+          <p class="purposes-banner-text">We use cookies to provide you with an optimal website experience. These
+            include cookies that are necessary for the operation and control of the website, as well as those that are
+            only used for anonymous statistical purposes or to display personalized content. Decide for yourself which
+            categories you want to allow. To learn more, please read our <a href="" class="purposes-banner-link">privacy
+              policy</a> .
+          </p>
         </div>
 
-        <div class="content-container">
-          <div>
-
-            <div>
-              <details>
+        <div class="purpose-wrapper">
+          <div class="purpose">
+            <div class="purpose-content">
+              <details class="purpose-details">
                 <summary>
                   <input type="checkbox" id="same-name-label-1" />
-                  <label for="same-name-label-1">Limited data collection (1) *</label>
+                  <label for="same-name-label-1" class="purpose-title">Limited data collection (1) *</label>
                 </summary>
-                <div>
-                  <div>
+                <div class="service-wrapper">
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-2" />
-                    <label for="same-name-label-2">Google Analytics *</label>
-                    <p>Limited Google Analytics</p>
-                    <p class="sub-p">limited data collection</p>
+                    <label for="same-name-label-2" class="service-title">Google Analytics *</label>
+                    <p class="service-description">Limited Google Analytics</p>
                   </div>
                 </div>
               </details>
             </div>
 
-            <div>
-              <details>
+            <div class="purpose-content">
+              <details class="purpose-details">
                 <summary>
                   <input type="checkbox" id="same-name-label-3" />
-                  <label for="same-name-label-3">Advertising (7)</label>
+                  <label for="same-name-label-3" class="purpose-title">Advertising (7)</label>
                 </summary>
-                <div>
-                  <div>
+                <div class="service-wrapper">
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-4" />
-                    <label for="same-name-label-4">Facebook Conversion API</label>
-                    <p>Marketing activities via Facebook</p>
-                    <details class="details">
-                      <summary>
-                        Show details
-                      </summary>
-                      <table>
+                    <label for="same-name-label-4" class="service-title">Facebook Conversion API</label>
+                    <p class="service-description">Marketing activities via Facebook</p>
+                    <details class="cookies-wrapper">
+                      <summary>Show details</summary>
+                      <table class="cookie-content">
                         <tbody>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Name:</td>
                             <td>fr</td>
                           </tr>
-                          <tr class="active-row">
+                          <tr class="cookie-row">
                             <td>Host:</td>
                             <td> https://facebook.com/</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Description:</td>
                             <td>This cookie is used to deliver advertisements and to measure and improve their
                               relevance.</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Kind:</td>
                             <td>3rd Party</td>
                           </tr>
                         </tbody>
                       </table>
-
-                      <table>
+                      <table class="cookie-content">
                         <tbody>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Name:</td>
                             <td>_fbc</td>
                           </tr>
-                          <tr class="active-row">
+                          <tr class="cookie-row">
                             <td>Host:</td>
                             <td> kredit.de</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Description:</td>
                             <td>This cookie is used to identify the click ID and to share data with Facebook so that
                               personalised content can be delivered to the user</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Kind:</td>
                             <td>1st Party</td>
                           </tr>
@@ -122,51 +121,48 @@
                     </details>
                   </div>
 
-                  <div>
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-5" />
-                    <label for="same-name-label-5">Bing Ads</label>
-                    <p>Marketing activities via Bing</p>
-                    <details class="details">
-                      <summary>
-                        Show details
-                      </summary>
-                      <table>
+                    <label for="same-name-label-5" class="service-title">Bing Ads</label>
+                    <p class="service-description">Marketing activities via Bing</p>
+                    <details class="cookies-wrapper">
+                      <summary>Show details</summary>
+                      <table class="cookie-content">
                         <tbody>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Name:</td>
                             <td>msclkid</td>
                           </tr>
-                          <tr class="active-row">
+                          <tr class="cookie-row">
                             <td>Host:</td>
                             <td>kredit.de</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Description:</td>
                             <td>Information about the ad click generated at the time of the ad click and appended to the
                               offer page URL when auto-tagging of the click ID by Microsoft is enabled.</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Kind:</td>
                             <td>1st Party</td>
                           </tr>
                         </tbody>
                       </table>
-
-                      <table>
+                      <table class="cookie-content">
                         <tbody>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Name:</td>
                             <td>MUID</td>
                           </tr>
-                          <tr class="active-row">
+                          <tr class="cookie-row">
                             <td>Host:</td>
                             <td>http://bing.com/</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Description:</td>
                             <td>Marketing activities via Bing</td>
                           </tr>
-                          <tr>
+                          <tr class="cookie-row">
                             <td>Kind:</td>
                             <td>3rd Party</td>
                           </tr>
@@ -174,26 +170,32 @@
                       </table>
                     </details>
                   </div>
-                  <div>
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-6" />
-                    <label for="same-name-label-6">Google Customer Match</label>
+                    <label for="same-name-label-6" class="service-title">Google Customer Match</label>
                   </div>
-                  <div>
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-7" />
-                    <label for="same-name-label-7">Google Ads Conversion Measurement</label>
+                    <label for="same-name-label-7" class="service-title">Google Ads Conversion Measurement</label>
                   </div>
-                  <div>
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-8" />
-                    <label for="same-name-label-8">Google Enhanced Conversions</label>
+                    <label for="same-name-label-8" class="service-title">Google Enhanced Conversions</label>
                   </div>
-                  <div>
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-9" />
-                    <label for="same-name-label-9">Adcell Pixel</label>
+                    <label for="same-name-label-9" class="service-title">Adcell Pixel</label>
                   </div>
-                  <div>
+
+                  <div class="service-content">
                     <input type="checkbox" id="same-name-label-10" />
-                    <label for="same-name-label-10">Google Ads Remarketing</label>
+                    <label for="same-name-label-10" class="service-title">Google Ads Remarketing</label>
                   </div>
+
                 </div>
               </details>
             </div>
@@ -202,13 +204,8 @@
           </div>
         </div>
 
-
-
-
-
-
-        <div class="buttons-container-modal-2">
-          <button class="btn save">Save</button>
+        <div class="buttons-purpose-wrapper">
+          <button class="btn button-save">Save</button>
         </div>
       </div>
     </div>

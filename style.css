@@ -29,231 +29,13 @@ body {
   display: none;
 }
 
-.black {
-  font-family: var(--bold-font);
-}
-
-/* common modal styles */
-
-.modal {
-  position: fixed;
-  z-index: 99;
-  top: 0;
-  left: 0;
-  display: flex;
-  transition: visibility 0s, opacity 0.5s ease-in-out;
-  visibility: hidden;
-  opacity: 0;
-  background: rgba(73, 73, 73, 0.8);
-}
-
-/* Styles modal 1 */
-.modal.modal-1 {
-  width: 100%;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal.modal-1 .modal-container {
-  width: 70%;
-  max-width: 700px;
-  height: auto;
-  background: white;
-  border-radius: 10px;
-  padding: 2rem;
-}
-
-.first-modal {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal_1_text {
-  line-height: 1.75;
-  font-size: 0.9em;
-  margin: 0;
-}
-
-.modal_1_text a {
-  color: black;
-}
-
-.modal_1_text a:hover {
-  color: grey;
-}
-
-.buttons-container-modal-1 {
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-}
-
-/* Styles modal 2 */
-.modal.modal-2 {
-  width: 100%;
-  height: 100vh;
-  align-items: flex-start;
-}
-
-.modal.modal-2 .modal-container {
-  width: 50%;
-  max-width: 625px;
-  height: 100%;
-  background: white;
-  border-radius: 0 10px 10px 0;
-}
-
-.second-modal {
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  height: 95vh;
-  justify-content: space-between;
-}
-
-.second-modal .modal_text {
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-
-.sub-p{
-  color: rgb(177, 177, 177);
-}
-
-summary {
-  font-family: var(--bold-font);
-}
-
-details div {
-  width: 92%;
-  margin: 1rem auto;
-}
-
-details div p {
-  font-size: 0.8em;
-  margin: 0.5rem 0 0 1.5rem;
-}
-
-details div div details summary {
-  font-family: var(--regular-font);
-  color: grey;
-  text-decoration: underline;
-  font-size: 12px;
-}
-
-.modal_2_text {
-  padding: 0 0 1.5rem;
-  margin: 0 1rem;
-  border-bottom: 1px #bababa63 solid;
-}
-
-.modal_2_text .title {
-  margin-bottom: 0.7rem;
-  font-size: 1.1rem;
-  font-family: var(--bold-font);
-}
-
-.modal_2_text > p {
-  line-height: 1.75;
-  font-size: 0.9em;
-  margin: 0;
-}
-
-.modal_2_text p a {
-  color: black;
-}
-
-.modal_2_text p a:hover {
-  color: grey;
-}
-
-.content-container {
-  padding: 1.5rem 1rem;
-}
-
-.content-container > div {
-  overflow-y: auto;
-  height: 60vh;
-}
-
-.content-container > div > div {
-  border: 1px #bababa63 solid;
-  margin-bottom: 1rem;
-  border-radius: 3px;
-  padding: 1rem 0 1rem 1rem;
-  margin-right: 1rem;
-}
-
-.content-container > div > div > details > div > div > details > summary {
-  list-style-type: none;
-  cursor: pointer;
-}
-
-.content-container > div > div > details > summary {
-  cursor: pointer;
-}
-
-.details {
-  margin: 1rem 0 1rem 1.5rem;
-}
-
-table {
-  margin: 1rem 0;
-  width: 100%;
-}
-
-tbody {
-  font-size: 0.75rem;
-}
-
-tbody tr {
-  background-color: #f1f1f1;
-}
-
-td {
-  border: none;
-  padding: 7px;
-}
-
-table tbody tr td:nth-child(1) {
-  width: 75px;
-}
-
-.buttons-container-modal-2 {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem 1rem 0;
-}
-
-/* close button */
-
-.close-btn-container {
-  margin-top: -0.3rem;
-}
-
-.close-btn {
-  background-color: transparent;
-  border: none;
-  font-size: 15px;
-  cursor: pointer;
-  outline: none;
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
-  padding: 0;
-}
-
 /* buttons */
 
 .btn {
   cursor: pointer;
 }
 
-.preferences {
+.button-preferences {
   background-color: white;
   color: black;
   font-size: 1rem;
@@ -265,7 +47,7 @@ table tbody tr td:nth-child(1) {
   max-width: 16em;
 }
 
-.accept {
+.button-accept {
   background-color: black;
   color: white;
   font-size: 1rem;
@@ -277,7 +59,7 @@ table tbody tr td:nth-child(1) {
   max-width: 16em;
 }
 
-.save {
+.button-save {
   background-color: black;
   color: white;
   font-size: 1rem;
@@ -289,30 +71,249 @@ table tbody tr td:nth-child(1) {
   max-width: 16em;
 }
 
-/* scroll */
+/* Styles first banner */
+.banner {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(73, 73, 73, 0.8);
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
 
-.content-container > div::-webkit-scrollbar {
+.banner-wrapper {
+  width: 70%;
+  max-width: 700px;
+  height: auto;
+  background: white;
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner-title {
+  font-family: var(--bold-font);
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+  align-self: flex-start;
+}
+
+.banner-text {
+  line-height: 1.75;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.banner-link {
+  color: black;
+}
+
+.banner-link:hover {
+  color: grey;
+}
+
+.banner-buttons-wrapper {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* close button purpose banner */
+
+.close-purposes-banner-wrapper {
+  margin-top: -0.3rem;
+}
+
+.button-x-close {
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding: 0;
+}
+
+.buttons-purpose-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 2rem 1rem 0;
+}
+
+/* Purpose second banner */
+.purposes-banner {
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  display: flex;
+  transition: visibility 0s, opacity 0.5s ease-in-out;
+  visibility: hidden;
+  opacity: 0;
+  background: rgba(73, 73, 73, 0.8);
+  width: 100%;
+  height: 100vh;
+  align-items: flex-start;
+}
+
+.purposes-banner-wrapper {
+  width: 50%;
+  max-width: 625px;
+  height: 100%;
+  background: white;
+  border-radius: 0 10px 10px 0;
+}
+
+.purposes-banner-content {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  height: 95vh;
+  justify-content: space-between;
+}
+
+.purposes-banner-text-wrapper {
+  padding: 0 0 1.5rem;
+  margin: 0 1rem;
+  border-bottom: 1px #bababa63 solid;
+}
+
+.purposes-banner-title {
+  margin-bottom: 0.7rem;
+  font-size: 1.1rem;
+  font-family: var(--bold-font);
+}
+
+.purposes-banner-text {
+  line-height: 1.75;
+  font-size: 0.9em;
+  margin: 0;
+}
+
+.purposes-banner-link {
+  color: black;
+}
+
+.purposes-banner-link:hover {
+  color: grey;
+}
+
+/* purpose */
+
+.purpose-wrapper {
+  padding: 1.5rem 1rem;
+}
+
+.purpose {
+  overflow-y: auto;
+  height: 60vh;
+}
+
+/* service scroll */
+
+.purpose::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-.content-container > div::-webkit-scrollbar:vertical {
+.purpose::-webkit-scrollbar:vertical {
   width: 9px;
 }
 
-.content-container > div::-webkit-scrollbar-button:increment,
-.content-container > div::-webkit-scrollbar-button {
+.purpose::-webkit-scrollbar-button:increment,
+.purpose::-webkit-scrollbar-button {
   display: none;
 }
 
-.content-container > div::-webkit-scrollbar-thumb {
+.purpose::-webkit-scrollbar-thumb {
   background-color: rgb(88, 88, 88);
   border-radius: 10px;
   border: 2px solid rgb(88, 88, 88);
 }
-.content-container > div::-webkit-scrollbar-track {
+
+.purpose::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
+/* purpose content */
 
-@media screen and (max-width: 1300px) {
+.purpose-content {
+  border: 1px #bababa63 solid;
+  margin-bottom: 1rem;
+  border-radius: 3px;
+  padding: 1rem 0 1rem 1rem;
+  margin-right: 1rem;
 }
+
+.purpose-details > summary {
+  cursor: pointer;
+  font-family: var(--bold-font);
+}
+
+/* services */
+
+.service-content {
+  width: 92%;
+  margin: 1rem auto;
+}
+
+.service-description {
+  font-size: 0.8em;
+  margin: 0.5rem 0 0 1.5rem;
+}
+
+/* cookies wrapper*/
+
+.cookies-wrapper {
+  margin: 1rem 0 1rem 1.5rem;
+}
+
+.cookies-wrapper > summary {
+  list-style-type: none;
+  cursor: pointer;
+  font-family: var(--regular-font);
+  color: grey;
+  text-decoration: underline;
+  font-size: 12px;
+}
+
+/* cookies table */
+
+.cookie-content {
+  margin: 1rem 0;
+  width: 100%;
+}
+
+.cookie-content > tbody {
+  font-size: 0.75rem;
+}
+
+.cookie-row {
+  background-color: #f1f1f1;
+}
+
+.cookie-row > td {
+  border: none;
+  padding: 7px;
+}
+
+.cookie-row > td:nth-child(1) {
+  width: 75px;
+}
+
+

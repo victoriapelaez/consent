@@ -151,9 +151,8 @@ body {
 }
 
 .buttons-purpose-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 2rem 1rem 0;
+  padding: 2.5rem 1rem 0;
+  flex-shrink: 0;
 }
 
 /* Purpose second banner */
@@ -218,35 +217,32 @@ body {
 
 .purpose-wrapper {
   padding: 1.5rem 1rem;
-}
-
-.purpose {
+  flex: 1;
   overflow-y: auto;
-  height: 60vh;
 }
 
-/* service scroll */
+/* purpose scroll */
 
-.purpose::-webkit-scrollbar {
+.purpose-wrapper::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-.purpose::-webkit-scrollbar:vertical {
+.purpose-wrapper::-webkit-scrollbar:vertical {
   width: 9px;
 }
 
-.purpose::-webkit-scrollbar-button:increment,
-.purpose::-webkit-scrollbar-button {
+.purpose-wrapper::-webkit-scrollbar-button:increment,
+.purpose-wrapper::-webkit-scrollbar-button {
   display: none;
 }
 
-.purpose::-webkit-scrollbar-thumb {
+.purpose-wrapper::-webkit-scrollbar-thumb {
   background-color: rgb(88, 88, 88);
   border-radius: 10px;
   border: 2px solid rgb(88, 88, 88);
 }
 
-.purpose::-webkit-scrollbar-track {
+.purpose-wrapper::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
@@ -280,7 +276,7 @@ body {
 /* cookies wrapper*/
 
 .cookies-wrapper {
-  margin: 1rem 0 1rem 1.5rem;
+  margin: 1rem 0 2rem 1.5rem;
 }
 
 .cookies-wrapper > summary {
@@ -316,4 +312,31 @@ body {
   width: 75px;
 }
 
+.cookies-subtitle {
+  color: grey;
+  font-size: 0.8rem;
+}
 
+.cookies-subtitle-description {
+  font-size: 0.7rem;
+  border: 1px #bababa63 solid;
+  border-radius: 3px;
+  padding: 0.7rem;
+  line-height: 1.5;
+}
+
+.cookies-legal-link-wrapper {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 95%;
+}
+
+.cookies-legal-link {
+  font-size: 0.7rem;
+  text-decoration: underline;
+  cursor: pointer;
+  color: grey;
+  padding-bottom: 0.5rem;
+}

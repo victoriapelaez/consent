@@ -272,32 +272,38 @@ body {
 .purpose-wrapper {
   padding: 0 1em 1.5em 1em;
   flex: 1;
-  /*   overflow-y: auto; */
+  overflow-y: auto;
   margin-top: 2em;
 }
 
 /* purpose scroll */
 
-.purposes-banner-content::-webkit-scrollbar {
+.purposes-banner-content::-webkit-scrollbar,
+.purpose-wrapper::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-.purposes-banner-content::-webkit-scrollbar:vertical {
-  width: 9px;
+.purposes-banner-content::-webkit-scrollbar:vertical,
+.purpose-wrapper::-webkit-scrollbar:vertical {
+  width: 6px;
 }
 
 .purposes-banner-content::-webkit-scrollbar-button:incement,
-.purposes-banner-content::-webkit-scrollbar-button {
+.purposes-banner-content::-webkit-scrollbar-button,
+.purpose-wrapper::-webkit-scrollbar-button:incement,
+.purpose-wrapper::-webkit-scrollbar-button {
   display: none;
 }
 
-.purposes-banner-content::-webkit-scrollbar-thumb {
+.purposes-banner-content::-webkit-scrollbar-thumb,
+.purpose-wrapper::-webkit-scrollbar-thumb {
   background-color: rgb(88, 88, 88);
-  border-radius: 10px;
+  border-radius: 5px;
   border: 2px solid rgb(88, 88, 88);
 }
 
-.purposes-banner-content::-webkit-scrollbar-track {
+.purposes-banner-content::-webkit-scrollbar-track,
+.purpose-wrapper::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
@@ -434,6 +440,8 @@ body {
     height: 87vh;
   }
 
+}
+
   @media screen and (max-height: 350px) and (max-width: 800px) {
     .purposes-banner-content {
       height: 77vh;
@@ -447,9 +455,9 @@ body {
     .banner-title {
       font-size: 1em;
       margin-top: 0;
+    }
   }
-  }
-}
+
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {

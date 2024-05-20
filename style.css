@@ -395,6 +395,10 @@ body {
 }
 
 @media screen and (max-width: 800px) {
+  .hidden-scroll {
+    transform: translateY(-100%);
+  }
+
   .banner-wrapper {
     width: auto;
     border-radius: 10px 10px 0 0;

@@ -35,5 +35,23 @@ document.addEventListener("DOMContentLoaded", function () {
   handleHideButtonClick([".button-accept", ".button-decline", ".button-decline-all", ".button-accept-all"], ".banner");
 
   handleHideButtonClick([".button-x-close", ".button-save"], ".purposes-banner");
+
+  var lastScrollTop = 0;
+  var container = document.querySelector("..purposes-banner-text-wrapper");
+
+  window.addEventListener("scroll", function () {
+    var currentScroll =  document.documentElement.scrollTop;
+    
+    if (currentScroll > lastScrollTop) {
+      // Scroll down
+      container.classList.add("hidden-scroll");
+    } else {
+      // Scroll up
+      container.classList.remove("hidden-scroll");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; 
+  }, false);
+
 });
 

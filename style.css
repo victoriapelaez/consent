@@ -431,7 +431,7 @@ body {
     padding: 2.5em 0 0;
   }
 
-  .purposes-banner-wrapper {
+  .purposes-banner {
     position: fixed;
     bottom: env(safe-area-inset-bottom, 0);
   }

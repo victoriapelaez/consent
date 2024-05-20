@@ -1,38 +1,39 @@
 document.addEventListener("DOMContentLoaded", function () {
-  // Hacer que el modal 1 aparezca después de 1 segundo
-  setTimeout(function () {
-    var modal1 = document.querySelector(".banner");
-    modal1.style.visibility = "visible";
-    modal1.style.opacity = "1";
-  }, 1000);
+  function showElementAfterDelay(selector, delay) {
+    setTimeout(function () {
+      var element = document.querySelector(selector);
+      element.style.visibility = "visible";
+      element.style.opacity = "1";
+    }, delay);
+  }
 
-  document.querySelector(".button-accept").addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector(".banner").style.display = "none";
-  });
+  function hideElement(selector) {
+    document.querySelector(selector).style.display = "none";
+  }
+
+
+  function handleHideButtonClick(buttonSelectors, elementToHide) {
+    buttonSelectors.forEach(function (buttonSelector) {
+      document.querySelector(buttonSelector).addEventListener("click", function (event) {
+        event.preventDefault();
+        hideElement(elementToHide);
+      });
+    });
+  }
+
+  showElementAfterDelay(".banner", 1000);
 
   document.querySelector(".button-preferences").addEventListener("click", function (event) {
-    var modal2 = document.querySelector(".purposes-banner");
     event.preventDefault();
-    document.querySelector(".banner").style.display = "none";
-    document.querySelector(".purposes-banner").classList.remove("hidden");
+    hideElement(".banner");
+    var modal2 = document.querySelector(".purposes-banner");
+    modal2.classList.remove("hidden");
     modal2.style.visibility = "visible";
     modal2.style.opacity = "1";
   });
 
-  document.querySelector(".button-save").addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector(".purposes-banner").style.display = "none";
-  });
+  handleHideButtonClick([".button-accept", ".button-decline", ".button-decline-all", ".button-accept-all"], ".banner");
 
-  document.querySelector(".button-decline").addEventListener("click", function (event) {
-    event.preventDefault();
-    document.querySelector(".banner").style.display = "none";
-  });
-
-  var closeButton = document.querySelector(".button-x-close");
-  closeButton.addEventListener("click", function () {
-    event.preventDefault();
-    document.querySelector(".purposes-banner").style.display = "none";
-  });
+  handleHideButtonClick([".button-x-close", ".button-save"], ".purposes-banner");
 });
+

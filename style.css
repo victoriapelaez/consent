@@ -278,26 +278,26 @@ body {
 
 /* purpose scroll */
 
-.purpose-wrapper::-webkit-scrollbar {
+.purposes-banner-content::-webkit-scrollbar {
   -webkit-appearance: none;
 }
 
-.purpose-wrapper::-webkit-scrollbar:vertical {
+.purposes-banner-content::-webkit-scrollbar:vertical {
   width: 9px;
 }
 
-.purpose-wrapper::-webkit-scrollbar-button:incement,
-.purpose-wrapper::-webkit-scrollbar-button {
+.purposes-banner-content::-webkit-scrollbar-button:incement,
+.purposes-banner-content::-webkit-scrollbar-button {
   display: none;
 }
 
-.purpose-wrapper::-webkit-scrollbar-thumb {
+.purposes-banner-content::-webkit-scrollbar-thumb {
   background-color: rgb(88, 88, 88);
   border-radius: 10px;
   border: 2px solid rgb(88, 88, 88);
 }
 
-.purpose-wrapper::-webkit-scrollbar-track {
+.purposes-banner-content::-webkit-scrollbar-track {
   border-radius: 5px;
 }
 
@@ -430,15 +430,15 @@ body {
     padding: 1.5em 0 0;
   }
 
+  .purposes-banner-content {
+    height: 87vh;
+  }
+
 }
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
     max-width: 100%;
-  }
-
-  .purposes-banner-content {
-    height: 87vh;
   }
 
   .banner-title {

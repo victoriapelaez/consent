@@ -484,6 +484,7 @@ body {
 
   .purpose-wrapper {
     padding: 0 1em 1.5em 0.5em;
+    flex: auto;
   }
 
   .purpose-content {

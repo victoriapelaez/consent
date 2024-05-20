@@ -397,12 +397,13 @@ body {
 @media screen and (max-width: 800px) {
   .banner {
     align-items: flex-end;
-    bottom: env(safe-area-inset-bottom, 0);
   }
-
+  
   .banner-wrapper {
-    width: 100%;
+    width: auto;
     border-radius: 10px 10px 0 0;
+    position: fixed;
+    bottom: env(safe-area-inset-bottom, 0);
   }
 
   .banner-buttons-wrapper {
@@ -432,7 +433,7 @@ body {
 }
 
 @supports (height: 100dvh) {
-  .banner {
+  .banner-wrapper {
     bottom: 0;
   }
 }

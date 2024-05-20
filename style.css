@@ -272,7 +272,7 @@ body {
 .purpose-wrapper {
   padding: 0 1em 1.5em 1em;
   flex: 1;
-/*   overflow-y: auto; */
+  /*   overflow-y: auto; */
   margin-top: 2em;
 }
 
@@ -434,12 +434,21 @@ body {
     height: 87vh;
   }
 
-  @media screen and (max-height: 350px)  {
+  @media screen and (max-height: 350px) and (max-width: 800px) {
     .purposes-banner-content {
       height: 77vh;
     }
-  }
 
+    .banner-text {
+      line-height: 1.65;
+      font-size: 0.8em;
+    }
+
+    .banner-title {
+      font-size: 1em;
+      margin-top: 0;
+  }
+  }
 }
 
 @media screen and (max-width: 600px) {

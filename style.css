@@ -431,7 +431,13 @@ body {
   }
 
   .purposes-banner-content {
-    height: 80vh;
+    height: 87vh;
+  }
+
+  @media screen and (max-height: 350px)  {
+    .purposes-banner-content {
+      height: 77vh;
+    }
   }
 
 }

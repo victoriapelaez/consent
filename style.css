@@ -430,9 +430,9 @@ body {
     padding: 1.5em 0 0;
   }
 
-/*   .purposes-banner-content {
-    height: 87vh;
-  } */
+  .purposes-banner-content {
+    height: 80vh;
+  }
 
 }
 

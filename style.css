@@ -431,16 +431,16 @@ body {
     padding: 2.5em 0 0;
   }
 
-  .purposes-banner {
-    position: fixed;
-    bottom: env(safe-area-inset-bottom, 0);
-  }
 }
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
     max-width: 100%;
   }
+
+  .purposes-banner-content {
+    height: 90vh;
+}
 
   .banner-title {
     font-size: 1em;

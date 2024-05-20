@@ -425,7 +425,7 @@ body {
   .buttons-purpose-wrapper {
     flex-direction: column-reverse;
     gap: 10px;
-    width: 95%;
+    width: 100%;
     margin: auto;
     padding: 1.5em 0 0;
   }

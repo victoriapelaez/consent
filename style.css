@@ -269,9 +269,10 @@ body {
 /* purpose */
 
 .purpose-wrapper {
-  padding: 1.5em 1em;
+  padding: 0 1em 1.5em 1em;
   flex: 1;
   overflow-y: auto;
+  margin-top: 2em;
 }
 
 /* purpose scroll */
@@ -306,7 +307,6 @@ body {
   margin-bottom: 1em;
   border-radius: 3px;
   padding: 1em 0 1em 1em;
-  margin-right: 1em;
 }
 
 .purpose-details > summary {
@@ -397,6 +397,7 @@ body {
 @media screen and (max-width: 800px) {
   .banner {
     align-items: flex-end;
+    bottom: env(safe-area-inset-bottom, 0);
   }
 
   .banner-wrapper {
@@ -430,8 +431,73 @@ body {
   }
 }
 
+@supports (height: 100dvh) {
+  .banner {
+    bottom: 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
     max-width: 100%;
+  }
+
+  .banner {
+    padding-bottom: calc(10px + env(safe-area-inset-bottom, 0));
+  }
+
+  .banner-title {
+    font-size: 1em;
+  }
+
+  .purposes-banner-title {
+    font-size: 1em;
+    margin-top: 0;
+  }
+
+  .banner-text,
+  .purposes-banner-text,
+  .service-title {
+    font-size: 0.8em;
+  }
+
+  .purpose-details > summary,
+  .service-title {
+    font-size: 0.9em;
+  }
+
+  .service-description,
+  .cookies-subtitle {
+    font-size: 0.75em;
+  }
+
+  .service-description {
+    margin: 0.5em 0 0 0.5em;
+}
+
+  .purposes-banner-text-wrapper {
+    margin: 0 0.5em;
+  }
+
+  .purpose-wrapper {
+    padding: 0 1em 1.5em 0.5em;
+  }
+
+  .purpose-content {
+    padding: 0.75em 0 0.75em 0.75em;
+  }
+
+  .service-content {
+    width: 100%;
+    margin: 1em auto 0.5em auto;
+  }
+
+  .cookies-wrapper {
+    margin: 0.5em 1em 1.5em 0.5em;
+  }
+
+  .cookies-legal-link-wrapper {
+    margin: 1em auto;
+    width: 100%;
   }
 }

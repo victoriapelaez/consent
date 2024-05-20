@@ -25,6 +25,11 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".purposes-banner").style.display = "none";
   });
 
+  document.querySelector(".button-decline").addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(".banner").style.display = "none";
+  });
+
   var closeButton = document.querySelector(".button-x-close");
   closeButton.addEventListener("click", function () {
     event.preventDefault();

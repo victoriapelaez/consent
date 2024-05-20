@@ -238,6 +238,7 @@ body {
   flex-direction: column;
   height: 95vh;
   justify-content: space-between;
+  overflow-y: auto;
 }
 
 .purposes-banner-text-wrapper {
@@ -271,7 +272,7 @@ body {
 .purpose-wrapper {
   padding: 0 1em 1.5em 1em;
   flex: 1;
-  overflow: auto;
+/*   overflow-y: auto; */
   margin-top: 2em;
 }
 
@@ -395,17 +396,12 @@ body {
 }
 
 @media screen and (max-width: 800px) {
-  .hidden-scroll {
-    transform: translateY(-100%);
-  }
-
   .banner-wrapper {
     width: auto;
     border-radius: 10px 10px 0 0;
     position: fixed;
     bottom: env(safe-area-inset-bottom, 0);
     padding: 1rem;
-    overflow-y: auto;
   }
 
   .banner-buttons-wrapper {
@@ -434,10 +430,6 @@ body {
     padding: 1.5em 0 0;
   }
 
-  .purposes-banner-wrapper,
-  .purposes-banner-content {
-    overflow-y: auto;
-  }
 }
 
 @media screen and (max-width: 600px) {

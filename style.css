@@ -439,7 +439,7 @@ body {
   }
 
   .purposes-banner-content {
-    height: 88vh;
+    height: 85vh;
 }
 
   .banner-title {
@@ -454,7 +454,7 @@ body {
   .banner-text,
   .purposes-banner-text,
   .service-title {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   .purpose-details > summary,

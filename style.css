@@ -431,16 +431,9 @@ body {
     padding: 2.5em 0 0;
   }
 
-  .purposes-banner {
+  .purposes-banner-wrapper {
     position: fixed;
     bottom: env(safe-area-inset-bottom, 0);
-  }
-}
-
-@supports (height: 100dvh) {
-  .banner-wrapper,
-  .purposes-banner {
-    bottom: 0;
   }
 }
 
@@ -484,7 +477,6 @@ body {
 
   .purpose-wrapper {
     padding: 0 1em 1.5em 0.5em;
-    flex: auto;
   }
 
   .purpose-content {

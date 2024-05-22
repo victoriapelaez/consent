@@ -445,11 +445,16 @@ body {
   @media screen and (max-height: 350px) and (max-width: 800px) {
     .purposes-banner-content {
       height: 77vh;
+      overflow-y: auto;
     }
 
     .banner-text {
       line-height: 1.65;
       font-size: 0.8em;
+    }
+
+    .purpose-wrapper {
+      overflow-y: visible; 
     }
 
     .banner-title {
@@ -482,12 +487,12 @@ body {
 
   .purpose-details > summary,
   .service-title {
-    font-size: 0.9em;
+    font-size: 0.8em;
   }
 
   .service-description,
-  .cookies-subtitle {
-    font-size: 0.75em;
+  .cookies-subtitle, .cookies-wrapper > summary {
+    font-size: 0.7em;
   }
 
   .service-description {
@@ -495,7 +500,7 @@ body {
   }
 
   .purposes-banner-text-wrapper {
-    margin: 0;
+    margin: 0 1em 0 0;
     padding: 0 0 1em;
   }
 
@@ -506,6 +511,7 @@ body {
 
   .purpose-content {
     padding: 0.75em 0 0.75em 0.75em;
+    margin-right: 0.5em;
   }
 
   .service-content {

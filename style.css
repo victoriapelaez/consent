@@ -442,7 +442,7 @@ body {
 
 }
 
-  @media screen and (max-height: 350px) and (max-width: 800px) {
+  @media screen and (max-height: 500px) {
     .purposes-banner-content {
       height: 77vh;
       overflow-y: auto;

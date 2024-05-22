@@ -13,8 +13,9 @@
 :root {
   --bold-font: "font-bold";
   --regular-font: "font-regular";
-  --primary-color: black;
+  --primary-color: #8b9b32;
   --secundary-color: white;
+  --terciary-color: #1a2107;
 }
 
 html {
@@ -39,8 +40,7 @@ body {
 }
 
 .btn:hover {
-  background-color: var(--secundary-color);
-  color: var(--primary-color);
+  background-color: #8b9b322f;
   transition: 0.4s;
 }
 
@@ -48,22 +48,25 @@ body {
   background-color: var(--primary-color);
   color: var(--secundary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 13em;
   max-width: 16em;
   flex: 1;
 }
 
+.button-preferences:hover,
+.button-accept-all:hover {
+  color: var(--terciary-color);
+}
+
 .button-accept {
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
+  background-color: var(--secundary-color);
+  color: var(--terciary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 13em;
   max-width: 16em;
@@ -71,12 +74,11 @@ body {
 }
 
 .button-decline {
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
+  background-color: var(--secundary-color);
+  color: var(--terciary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 13em;
   max-width: 16em;
@@ -84,24 +86,23 @@ body {
 }
 
 .button-save {
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
+  background-color: var(--secundary-color);
+  color: var(--terciary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 10em;
   max-width: 16em;
   flex: 1;
 }
+
 .button-decline-all {
-  background-color: var(--primary-color);
-  color: var(--secundary-color);
+  background-color: var(--secundary-color);
+  color: var(--terciary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 10em;
   max-width: 16em;
@@ -112,9 +113,8 @@ body {
   background-color: var(--primary-color);
   color: var(--secundary-color);
   font-size: 1em;
-  font-family: var(--bold-font);
   padding: 0.625em 1em;
-  border-radius: 3px;
+  border-radius: 2rem;
   border: 1px var(--primary-color) solid;
   width: 10em;
   max-width: 16em;
@@ -135,51 +135,62 @@ body {
   width: 100%;
   height: 100vh;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .banner-wrapper {
-  width: 70%;
-  max-width: 700px;
+  width: 100%;
+  max-width: 100%;
   height: auto;
   background: var(--secundary-color);
-  border-radius: 10px;
   padding: 2em;
 }
 
 .banner-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  align-items: start;
+  gap: 1rem;
+  width: 75%;
+  margin: auto;
 }
 
 .banner-title {
   font-family: var(--bold-font);
   font-size: 1.125em;
   margin-top: 0.5em;
-  align-self: flex-start;
+  margin-bottom: 0;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
 }
 
 .banner-text {
   line-height: 1.75;
   font-size: 0.9em;
   margin: 0;
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  width: 90%;
 }
 
 .banner-link {
-  color: var(--primary-color);
+  color: black;
 }
 
 .banner-link:hover {
-  color: grey;
+  color: var(--primary-color);
 }
 
 .banner-buttons-wrapper {
-  margin-top: 1.5em;
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  height: 100%;
 }
 
 /* close button purpose banner */
@@ -222,21 +233,22 @@ body {
   background: rgba(73, 73, 73, 0.8);
   width: 100%;
   height: 100vh;
-  align-items: flex-start;
+  align-items: flex-end;
+  justify-content: flex-end;
 }
 
 .purposes-banner-wrapper {
-  max-width: 625px;
-  height: 100%;
+  max-width: 450px;
+  height: 70%;
   background: var(--secundary-color);
-  border-radius: 0 10px 10px 0;
+  border-radius: 10px 0 0 0;
 }
 
 .purposes-banner-content {
   padding: 1em;
   display: flex;
   flex-direction: column;
-  height: 95vh;
+  height: 65vh;
   justify-content: space-between;
   overflow-y: auto;
 }
@@ -261,11 +273,11 @@ body {
 }
 
 .purposes-banner-link {
-  color: var(--primary-color);
+  color: black;
 }
 
 .purposes-banner-link:hover {
-  color: grey;
+  color: var(--primary-color);
 }
 
 /* purpose */
@@ -298,9 +310,9 @@ body {
 
 .purposes-banner-content::-webkit-scrollbar-thumb,
 .purpose-wrapper::-webkit-scrollbar-thumb {
-  background-color: rgb(88, 88, 88);
+  background-color: #7b8831;
   border-radius: 5px;
-  border: 2px solid rgb(88, 88, 88);
+  border: 2px solid #7b8831;
 }
 
 .purposes-banner-content::-webkit-scrollbar-track,
@@ -311,15 +323,23 @@ body {
 /* purpose content */
 
 .purpose-content {
-  border: 1px #bababa63 solid;
+  border: 1px #8b9b322f solid;
   margin-bottom: 1em;
   border-radius: 3px;
   padding: 1em 0 1em 1em;
 }
 
+.purpose-details[open] > summary {
+  color: var(--primary-color);
+  font-family: var(--bold-font);
+}
+
 .purpose-details > summary {
   cursor: pointer;
-  font-family: var(--bold-font);
+}
+
+.purpose-details > summary::marker {
+  color: black;
 }
 
 /* services */
@@ -361,7 +381,7 @@ body {
 }
 
 .cookie-row {
-  background-color: #f1f1f1;
+  background-color: #e6e9d32f;
 }
 
 .cookie-row > td {
@@ -374,13 +394,13 @@ body {
 }
 
 .cookies-subtitle {
-  color: grey;
+  color: var(--primary-color);
   font-size: 0.8em;
 }
 
 .cookies-subtitle-description {
   font-size: 0.7em;
-  border: 1px #bababa63 solid;
+  border: 1px #8b9b322f solid;
   border-radius: 3px;
   padding: 0.7em;
   line-height: 1.5;
@@ -400,6 +420,16 @@ body {
   cursor: pointer;
   color: grey;
   padding-bottom: 0.5em;
+}
+
+@media screen and (max-width: 1500px) {
+  .purposes-banner-content {
+    height: 83vh;
+  }
+
+  .purposes-banner-wrapper {
+    height: 90%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -442,30 +472,32 @@ body {
     padding: 1em 1em 0.5em 1em;
   }
 
+  .purposes-banner-text {
+    line-height: 1.5;
+    font-size: 0.75em;
+  }
 }
 
-  @media screen and (max-height: 500px) {
-    .purposes-banner-content {
-      height: 77vh;
-      overflow-y: auto;
-    }
-
-    .banner-text {
-      line-height: 1.65;
-      font-size: 0.8em;
-    }
-
-    .purpose-wrapper {
-      overflow-y: visible; 
-    }
-
-    .banner-title {
-      font-size: 1em;
-      margin-top: 0;
-    }
-
+@media screen and (max-height: 500px) {
+  .purposes-banner-content {
+    height: 77vh;
+    overflow-y: auto;
   }
 
+  .banner-text {
+    line-height: 1.65;
+    font-size: 0.8em;
+  }
+
+  .purpose-wrapper {
+    overflow-y: visible;
+  }
+
+  .banner-title {
+    font-size: 1em;
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
@@ -493,7 +525,8 @@ body {
   }
 
   .service-description,
-  .cookies-subtitle, .cookies-wrapper > summary {
+  .cookies-subtitle,
+  .cookies-wrapper > summary {
     font-size: 0.7em;
   }
 
@@ -532,5 +565,5 @@ body {
 
   .buttons-purpose-wrapper {
     width: 100%;
-}
+  }
 }

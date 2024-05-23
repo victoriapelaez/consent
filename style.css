@@ -68,7 +68,8 @@ body {
   flex: 1;
 }
 
-.button-accept:hover, .button-accept-all:hover{
+.button-accept:hover,
+.button-accept-all:hover {
   color: var(--secundary-color);
 }
 
@@ -133,7 +134,7 @@ body {
   width: 100%;
   height: 100vh;
   justify-content: center;
-  align-items:flex-end;
+  align-items: flex-end;
 }
 
 .banner-wrapper {
@@ -322,11 +323,30 @@ body {
 .purpose-details > summary {
   cursor: pointer;
   font-family: var(--bold-font);
+  display: flex;
+  align-items: center;
+  list-style: none;
+  height: 40px;
 }
 
-.purpose-details > summary::marker{
-  color: var(--primary-color);
+.purpose-details > summary::before {
+  content: "\01F891";
+  font-size: 2rem;
+  display: inline-block;
+  transition: transform 0.3s;
+  margin-bottom: 2rem;
 }
+
+.purpose-details[open] > summary::before {
+  content: "\01F893";
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+
+.service-wrapper {
+  margin-top: -1em;
+}
+
 
 /* services */
 
@@ -408,11 +428,11 @@ body {
   padding-bottom: 0.5em;
 }
 
-@media screen and (max-width: 1500px){
-.purposes-banner-text {
-  line-height: 1.5;
-  font-size: 0.75em;
-}
+@media screen and (max-width: 1500px) {
+  .purposes-banner-text {
+    line-height: 1.5;
+    font-size: 0.75em;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -454,31 +474,28 @@ body {
     height: 87.5vh;
     padding: 1em 1em 0.5em 1em;
   }
-
 }
 
-  @media screen and (max-height: 500px) {
-    .purposes-banner-content {
-      height: 77vh;
-      overflow-y: auto;
-    }
-
-    .banner-text {
-      line-height: 1.65;
-      font-size: 0.8em;
-    }
-
-    .purpose-wrapper {
-      overflow-y: visible; 
-    }
-
-    .banner-title {
-      font-size: 1em;
-      margin-top: 0;
-    }
-
+@media screen and (max-height: 500px) {
+  .purposes-banner-content {
+    height: 77vh;
+    overflow-y: auto;
   }
 
+  .banner-text {
+    line-height: 1.65;
+    font-size: 0.8em;
+  }
+
+  .purpose-wrapper {
+    overflow-y: visible;
+  }
+
+  .banner-title {
+    font-size: 1em;
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
@@ -506,7 +523,8 @@ body {
   }
 
   .service-description,
-  .cookies-subtitle, .cookies-wrapper > summary {
+  .cookies-subtitle,
+  .cookies-wrapper > summary {
     font-size: 0.7em;
   }
 
@@ -545,5 +563,5 @@ body {
 
   .buttons-purpose-wrapper {
     width: 100%;
-}
+  }
 }

@@ -330,23 +330,23 @@ body {
 }
 
 .purpose-details > summary::before {
-  content: "\01F891";
-  font-size: 2rem;
+  content: "+";
+  font-size: 1.2em;
   display: inline-block;
   transition: transform 0.3s;
-  margin-bottom: 2rem;
+  margin-right: 0.2em;
 }
 
 .purpose-details[open] > summary::before {
-  content: "\01F893";
-  font-size: 2rem;
-  margin-bottom: -1rem;
+  content: "_";
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  margin-right: 0.2em;
 }
 
 .service-wrapper {
   margin-top: -1em;
 }
-
 
 /* services */
 
@@ -530,6 +530,7 @@ body {
 
   .service-description {
     margin: 0.5em 0 0 0.5em;
+    width: 100%;
   }
 
   .purposes-banner-text-wrapper {
@@ -550,6 +551,8 @@ body {
   .service-content {
     width: 100%;
     margin: 1em auto 0.5em auto;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .cookies-wrapper {

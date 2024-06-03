@@ -317,9 +317,98 @@ body {
   padding: 1em 0 1em 1em;
 }
 
+.purpose-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .purpose-details > summary {
-  cursor: pointer;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  width: 98%;
   font-family: var(--bold-font);
+  list-style: none;
+}
+
+.purpose-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.toggle-details-symbol::before {
+  content: "+";
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
+.purpose-details[open] > summary .toggle-details-symbol::before {
+  content: "-";
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+  margin-right: 0.5em;
+}
+
+/* Estilos para el switch */
+.purpose-switch-container {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.purpose-details > summary input[type="checkbox"] {
+  display: none;
+}
+
+.purpose-details > summary .switch-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.purpose-details > summary .switch-container label {
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.purpose-switch {
+  width: 40px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 20px;
+  position: relative;
+  margin-right: 1em;
+}
+
+.purpose-switch::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.purpose-switch-container
+  input[type="checkbox"]:checked
+  + .purpose-switch::before {
+  transform: translateX(20px);
+}
+
+/* Estilos para el switch cuando está activo */
+.purpose-switch-container input[type="checkbox"]:checked + .purpose-switch {
+  background-color: #3f3f3f;
+}
+
+.purpose-switch-container
+  input[type="checkbox"]:checked
+  + .purpose-switch::before {
+  background-color: white;
 }
 
 /* services */
@@ -441,31 +530,28 @@ body {
     height: 87.5vh;
     padding: 1em 1em 0.5em 1em;
   }
-
 }
 
-  @media screen and (max-height: 500px) {
-    .purposes-banner-content {
-      height: 77vh;
-      overflow-y: auto;
-    }
-
-    .banner-text {
-      line-height: 1.65;
-      font-size: 0.8em;
-    }
-
-    .purpose-wrapper {
-      overflow-y: visible; 
-    }
-
-    .banner-title {
-      font-size: 1em;
-      margin-top: 0;
-    }
-
+@media screen and (max-height: 500px) {
+  .purposes-banner-content {
+    height: 77vh;
+    overflow-y: auto;
   }
 
+  .banner-text {
+    line-height: 1.65;
+    font-size: 0.8em;
+  }
+
+  .purpose-wrapper {
+    overflow-y: visible;
+  }
+
+  .banner-title {
+    font-size: 1em;
+    margin-top: 0;
+  }
+}
 
 @media screen and (max-width: 600px) {
   .purposes-banner-wrapper {
@@ -493,7 +579,8 @@ body {
   }
 
   .service-description,
-  .cookies-subtitle, .cookies-wrapper > summary {
+  .cookies-subtitle,
+  .cookies-wrapper > summary {
     font-size: 0.7em;
   }
 
@@ -532,5 +619,5 @@ body {
 
   .buttons-purpose-wrapper {
     width: 100%;
-}
+  }
 }

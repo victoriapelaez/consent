@@ -315,62 +315,25 @@ body {
   margin-bottom: 1em;
   border-radius: 3px;
   padding: 1em 0 1em 1em;
+  display: flex;
+  flex-direction: column;
 }
 
-.purpose-details {
+.purpose-title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-}
-
-.purpose-details > summary {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  align-items: center;
-  width: 98%;
+  margin-left: 1em;
   font-family: var(--bold-font);
-  list-style: none;
 }
 
-.purpose-details > summary::-webkit-details-marker {
-  display: none;
-}
-
-.toggle-details-symbol::before {
-  content: "+";
-  font-size: 1.2em;
-  margin-right: 0.5em;
-  cursor: pointer;
-}
-
-.purpose-details[open] > summary .toggle-details-symbol::before {
-  content: "-";
-  font-size: 1.2em;
-  margin-bottom: 1rem;
-  margin-right: 0.5em;
-}
-
-/* Estilos para el switch */
 .purpose-switch-container {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
 
-.purpose-details > summary input[type="checkbox"] {
+.purpose-switch-container input[type="checkbox"] {
   display: none;
-}
-
-.purpose-details > summary .switch-container {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.purpose-details > summary .switch-container label {
-  margin-right: auto;
-  cursor: pointer;
 }
 
 .purpose-switch {
@@ -393,6 +356,39 @@ body {
   border-radius: 50%;
   transition: transform 0.3s ease;
 }
+
+.purpose-details > summary {
+  font-family: var(--bold-font);
+  list-style: none;
+}
+
+.purpose-details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.purpose-details > summary .switch-container {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-details-symbol {
+  position: absolute;
+  margin-bottom: 1.1em;
+}
+
+.toggle-details-symbol::before {
+  content: "+";
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.purpose-details[open] > summary .toggle-details-symbol::before {
+  content: "-";
+  font-size: 1.2em;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para el switch */
 
 .purpose-switch-container
   input[type="checkbox"]:checked
@@ -599,7 +595,7 @@ body {
   }
 
   .purpose-content {
-    padding: 0.75em 0 0.75em 0.75em;
+    padding: 0.75em 0 0.75em 0.5em;
     margin-right: 0.5em;
   }
 
@@ -619,5 +615,32 @@ body {
 
   .buttons-purpose-wrapper {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .toggle-details-symbol {
+    margin-bottom: 1.2em;
+  }
+
+  .purpose-title {
+    font-size: 0.8em;
+  }
+
+  .purpose-switch {
+    width: 35px;
+    height: 17px;
+    margin-right: 0.7em;
+  }
+
+  .purpose-switch::before {
+    width: 13px;
+    height: 13px;
+  }
+
+  .purpose-switch-container
+    input[type="checkbox"]:checked
+    + .purpose-switch::before {
+    transform: translateX(18px);
   }
 }

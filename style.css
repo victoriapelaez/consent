@@ -322,7 +322,6 @@ body {
 .purpose-title {
   display: flex;
   justify-content: space-between;
-  margin-left: 1em;
   font-family: var(--bold-font);
 }
 
@@ -342,7 +341,7 @@ body {
   background-color: #ccc;
   border-radius: 20px;
   position: relative;
-  margin-right: 1em;
+  margin-right: 2.5em;
 }
 
 .purpose-switch::before {
@@ -369,23 +368,25 @@ body {
 .purpose-details > summary .switch-container {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .toggle-details-symbol {
-  position: absolute;
-  margin-bottom: 1.1em;
+  margin-top: -1.4rem;
 }
 
 .toggle-details-symbol::before {
   content: "+";
   font-size: 1.2em;
   cursor: pointer;
+  margin-right: 0.8em;
 }
 
 .purpose-details[open] > summary .toggle-details-symbol::before {
   content: "-";
   font-size: 1.2em;
   margin-bottom: 1rem;
+  margin-right: 0.8em;
 }
 
 /* Estilos para el switch */
@@ -619,18 +620,13 @@ body {
 }
 
 @media screen and (max-width: 400px) {
-  .toggle-details-symbol {
-    margin-bottom: 1.2em;
-  }
-
   .purpose-title {
-    font-size: 0.8em;
+    font-size: 0.75em;
   }
 
   .purpose-switch {
     width: 35px;
     height: 17px;
-    margin-right: 0.7em;
   }
 
   .purpose-switch::before {
@@ -642,5 +638,9 @@ body {
     input[type="checkbox"]:checked
     + .purpose-switch::before {
     transform: translateX(18px);
+  }
+
+  .toggle-details-symbol {
+    margin-top: -1.2rem;
   }
 }
